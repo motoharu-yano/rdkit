@@ -104,47 +104,47 @@ static void initRDKitGUC() {
       "rdkit.sss_fp_size",
       "Size (in bits) of the fingerprint used for substructure screening",
       "Size (in bits) of the fingerprint used for substructure screening",
-      &rdkit_sss_fp_size, SSS_FP_SIZE, 64, 4096, PGC_USERSET, 0, NULL, NULL,
+      &rdkit_sss_fp_size, SSS_FP_SIZE, 64, 32768, PGC_USERSET, 0, NULL, NULL,
       NULL);
   DefineCustomIntVariable(
       "rdkit.morgan_fp_size", "Size (in bits) of morgan fingerprints",
       "Size (in bits) of morgan fingerprints", &rdkit_morgan_fp_size,
-      MORGAN_FP_SIZE, 64, 9192, PGC_USERSET, 0, NULL, NULL, NULL);
+      MORGAN_FP_SIZE, 64, 32768, PGC_USERSET, 0, NULL, NULL, NULL);
   DefineCustomIntVariable(
       "rdkit.featmorgan_fp_size", "Size (in bits) of featmorgan fingerprints",
       "Size (in bits) of featmorgan fingerprints", &rdkit_featmorgan_fp_size,
-      FEATMORGAN_FP_SIZE, 64, 9192, PGC_USERSET, 0, NULL, NULL, NULL);
+      FEATMORGAN_FP_SIZE, 64, 32768, PGC_USERSET, 0, NULL, NULL, NULL);
   DefineCustomIntVariable(
       "rdkit.layered_fp_size", "Size (in bits) of layered fingerprints",
       "Size (in bits) of layered fingerprints", &rdkit_layered_fp_size,
-      LAYERED_FP_SIZE, 64, 9192, PGC_USERSET, 0, NULL, NULL, NULL);
+      LAYERED_FP_SIZE, 64, 32768, PGC_USERSET, 0, NULL, NULL, NULL);
   DefineCustomIntVariable(
       "rdkit.rdkit_fp_size", "Size (in bits) of RDKit fingerprints",
       "Size (in bits) of RDKit fingerprints", &rdkit_rdkit_fp_size,
-      RDKIT_FP_SIZE, 64, 9192, PGC_USERSET, 0, NULL, NULL, NULL);
+      RDKIT_FP_SIZE, 64, 32768, PGC_USERSET, 0, NULL, NULL, NULL);
   DefineCustomIntVariable(
       "rdkit.hashed_torsion_fp_size",
       "Size (in bits) of topological torsion bit vector fingerprints",
       "Size (in bits) of topological torsion bit vector fingerprints",
-      &rdkit_hashed_torsion_fp_size, HASHED_TORSION_FP_SIZE, 64, 9192,
+      &rdkit_hashed_torsion_fp_size, HASHED_TORSION_FP_SIZE, 64, 32768,
       PGC_USERSET, 0, NULL, NULL, NULL);
   DefineCustomIntVariable(
       "rdkit.hashed_atompair_fp_size",
       "Size (in bits) of atom pair bit vector fingerprints",
       "Size (in bits) of atom pair torsion bit vector fingerprints",
-      &rdkit_hashed_atompair_fp_size, HASHED_PAIR_FP_SIZE, 64, 9192,
+      &rdkit_hashed_atompair_fp_size, HASHED_PAIR_FP_SIZE, 64, 32768,
       PGC_USERSET, 0, NULL, NULL, NULL);
   DefineCustomIntVariable(
       "rdkit.reaction_sss_fp_size",
       "Size (in bits) of structural chemical reaction fingerprint",
       "Size (in bits) of structural chemical reaction fingerprint",
-      &rdkit_reaction_sss_fp_size, REACTION_SSS_FP_SIZE, 64, 9192, PGC_USERSET,
+      &rdkit_reaction_sss_fp_size, REACTION_SSS_FP_SIZE, 64, 32768, PGC_USERSET,
       0, NULL, NULL, NULL);
   DefineCustomIntVariable(
       "rdkit.reaction_difference_fp_size",
       "Size (in bits) of difference chemical reaction fingerprint",
       "Size (in bits) of difference chemical reaction fingerprint",
-      &rdkit_reaction_difference_fp_size, REACTION_DIFFERENCE_FP_SIZE, 64, 9192,
+      &rdkit_reaction_difference_fp_size, REACTION_DIFFERENCE_FP_SIZE, 64, 32768,
       PGC_USERSET, 0, NULL, NULL, NULL);
   DefineCustomIntVariable(
       "rdkit.reaction_sss_fp_type",
@@ -201,7 +201,7 @@ static void initRDKitGUC() {
   DefineCustomIntVariable(
       "rdkit.avalon_fp_size", "Size (in bits) of avalon fingerprints",
       "Size (in bits) of avalon fingerprints", &rdkit_avalon_fp_size,
-      AVALON_FP_SIZE, 64, 9192, PGC_USERSET, 0, NULL, NULL, NULL);
+      AVALON_FP_SIZE, 64, 32768, PGC_USERSET, 0, NULL, NULL, NULL);
   rdkit_guc_inited = true;
 }
 
